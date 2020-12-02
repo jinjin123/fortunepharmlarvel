@@ -1,0 +1,2292 @@
+/*reset*/
+*{
+	background-repeat: no-repeat;
+}
+body{
+	display: none;
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6, p, a, span, label{
+	color: #000;
+}
+a:hover, a:focus{
+	text-decoration: none;
+	color: black;
+}
+p a, .blue{
+	color: #518fcc;
+}
+.purple{
+	color: #1D778F;
+}
+.grey,
+.grey:hover,
+.grey:focus{
+	color: #666666;
+}
+.nopadding{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.container-fluid-40{
+	position: relative;
+	padding-right: 45px;
+	padding-left: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+.container-fluid-125{
+	position: relative;
+	padding-right: 125px;
+	padding-left: 125px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+#main{
+	max-width: 1680px;
+	margin: 0 auto;
+}
+h1{
+	margin: 0;
+}
+
+/*header*/
+#header{
+	border: 0;
+}
+#header #logo{
+	width: 90px;
+	height: 110px;
+	padding: 0;
+	margin: 0 0 0 0;
+}
+#header #nav-bar{
+	margin-top: 80px;
+}
+#header #lang, #header #social-icon{
+	margin-top: 60px;
+}
+#header #nav-bar a, #header #lang a, #lang-sidebar a{
+	color: #878787;
+}
+#header #nav-bar .active a, #header #nav-bar a:hover{
+	color: #040C4A;
+	border-bottom: 1px #040C4A solid;
+}
+#header #nav-bar a{
+	height: 30px;
+	line-height: 20px;
+	padding: 5px 10px;
+	margin: 0 5px;
+	border-bottom: 1px solid transparent;
+}
+#header #social-icon{
+	margin-left: 20px;
+}
+#header #social-icon a{
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	margin: 0 1px;
+}
+#header #social-icon a:hover{
+	background-position: 0 -24px;
+}
+#header #social-icon a.fb-icon{background-image: url(../img/facebook_icon.png);}
+#header #social-icon a.weibo-icon{background-image: url(../img/webio_icon.png);}
+#header #social-icon a.youtube-icon{background-image: url(../img/youtube_icon.png);}
+#header #lang a, #lang-sidebar a{
+	height: 24px;
+	line-height: 24px;
+	padding: 0 5px;
+	background-image: url(../img/laug_sep.png);
+	background-position: left;
+}
+#header #lang li:first-child a, #lang-sidebar li:first-child a{
+	background-image: none;
+}
+#header #lang .active a, #lang-sidebar .active a, #header #lang a:hover, #lang-sidebar a:hover{
+	color: #040C4A;
+}
+#header #lang li, #header #social-icon li{
+	margin: 13px 0;
+}
+
+/*footer*/
+#footer .container-fluid-40{
+	overflow: hidden;
+	margin: 20px 0 25px 0;
+}
+#footer .copyright{
+	float: left;
+}
+#footer .footer-link{
+	float: right;
+}
+#footer .footer-link ul{
+	overflow: hidden;
+	list-style-type: none;
+}
+#footer .footer-link ul li{
+	float: left;
+	height: 14px;
+	line-height: 14px;
+	border-left: 1px solid black;
+}
+#footer .footer-link ul li:first-child{
+	border: 0;
+}
+#footer .footer-link ul li a{
+	padding: 0 10px;
+}
+#footer .copyright p, #footer .footer-link ul li a{
+	height: 14px;
+	line-height: 14px;
+	margin: 0;
+}
+
+/*index*/
+#index #header, #index #footer{
+	border: 0;
+	padding: 0;
+}
+#index #main{
+	max-width: none;
+}
+#index #main .main-wrapper{
+	margin-right: -5px;
+}
+#index #main .index-wrapper,
+#product-take #product-take-wrapper .index-wrapper{
+	position: relative;
+	height: 100%;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+#index #main .index-wrapper img,
+#product-take #product-take-wrapper .index-wrapper img{
+	width: 100%;
+	height: 100%;
+}
+#index #main .index-wrapper h3{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	font-size: 1.2em;
+	-webkit-transition: 200ms linear;
+    -moz-transition: 200ms linear;
+    -ms-transition: 200ms linear;
+    -o-transition: 200ms linear;
+    transition: 200ms linear;
+}
+#index #main .index-wrapper p{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	font-size: 0.7em;
+	text-align: center;
+	display: none;
+}
+#index #main .index-wrapper .link-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	background-image: url(../img/arrow_icon.png);
+	background-position: center 75%;
+}
+#index #main .index-wrapper .link-wrapper.style1{
+	background-color: #6ECCF4;
+}
+#index #main .index-wrapper .link-wrapper.style2{
+	background-color: #C4EDF6;
+}
+#index #main .index-wrapper .link-wrapper h3{
+	color: #FFF;
+	z-index: 2;
+}
+#index #main .index-wrapper .link-wrapper h3.blue{
+	color: #7CCAFA;
+}
+#index #main .index-wrapper .link-wrapper h3.red{
+	color: #FF6360;
+}
+#index #main .index-wrapper .video-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	background-color: #6ECCF4;
+	background-image: url(../img/index_img_video.png);
+	background-size: 20%;
+	background-position: 30% 40%;
+}
+#index #main .index-wrapper .video-wrapper p{
+	display: block;
+	color: #FFF;
+	width: 50%;
+	left: 45%;
+}
+#index #main .index-wrapper .video-wrapper p.video-text1{
+	font-size: 1.2em;
+	top: 30%;
+}
+#index #main .index-wrapper .video-wrapper p.video-text2{
+	font-size: 0.7em;
+	top: 50%;
+}
+#index #main .index-wrapper .banner-title{
+	position: absolute;
+	width: auto;
+	height: auto;
+	left: 0;
+	top: 5px;
+}
+#index #main .index-wrapper.video:after{
+	content: '';
+	width: 44px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -15px;
+	margin-left: -22px;
+	background-image: url(../img/youtube_btn.png);
+	background-position: 0 -30px;
+	cursor: pointer;
+}
+#index #main .index-wrapper.video:hover:after{
+	background-position: 0 0;
+}
+#index #main .banner-wrapper{
+	position: relative;
+}
+#index #main .banner-wrapper, #index #main .banner-wrapper .carousel-inner, #index #main .banner-wrapper img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#index #main .banner-wrapper .carousel-indicators{
+	bottom: 0px;
+}
+#index #main .index-wrapper .info-label{
+	background-color: #6ECCF4 !important;
+}
+
+/*banner*/
+#banner-wrapper{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-bottom: 30px;
+}
+#banner-wrapper img{
+	width: 100%;
+}
+
+/*banner*/
+#banner-wrapper{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-bottom: 30px;
+}
+#banner-wrapper img{
+	width: 100%;
+}
+
+/*product*/
+.scroll-wrapper{
+	-webkit-overflow-scrolling:touch;
+	overflow:hidden;
+	//overflow-y:hidden;
+	//overflow-x:scroll;
+}
+#product .market-tab-wrapper{
+	float: none;
+	width: 390px;
+	margin: 0 auto;
+}
+#product .market-tab-wrapper li:hover,
+#product .market-tab-wrapper li.active{
+	background-color: #F7F7F7;
+}
+#product .market-tab-wrapper li:hover a,
+#product .market-tab-wrapper li.active a{
+	color: #000;
+}
+#product .market-tab-wrapper a{
+	width: 130px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #1D778F;
+}
+#product .market-tab-wrapper .active a{
+	color: #000;
+}
+#product .sub-tab-outer-wrapper,
+#faq .sub-tab-outer-wrapper,
+#health-tips .sub-tab-outer-wrapper{
+	width: 100%;
+	height: 50px;
+	background-color: #F7F7F7;
+	background-image: url(../img/menu_shadow.png);
+	background-position: bottom;
+}
+#product .sub-tab-wrapper{
+	width: 840px;
+	float: none;
+	margin: 0 auto;
+}
+#product .sub-tab-wrapper li a,
+#faq .sub-tab-wrapper li a,
+#health-tips .sub-tab-wrapper li a{
+	width: 120px;
+	text-align: center;
+	color: #1D778F;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#product .sub-tab-wrapper li:hover,
+#product .sub-tab-wrapper li.active{
+	background-color: #E2F2ED;
+}
+#product .sub-tab-wrapper li:hover a,
+#product .sub-tab-wrapper li.active a{
+	color: #666666;
+}
+#product .tab-icon-outer-wrapper{
+	width: 100%;
+	height: 120px;
+	background-color: #EFF9F6;
+}
+#product .tab-icon-outer-wrapper .tab-icon-wrapper img{
+	height: 90px;
+}
+#product #product-wrapper, #product #product-content-wrapper{
+	margin: 30px 0;
+}
+#product #product-wrapper .product-big-image,
+#product #product-wrapper .product-small-image,
+#product #product-wrapper .product-description{
+	position: relative;
+	height: 450px;
+}
+#product #product-wrapper .product-big-image img{
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+}
+#product #product-wrapper .product-big-image .zoom-btn,
+.healthcare .healthcare-wrapper .zoom-btn{
+	position: absolute;
+	left: 15px;
+	bottom: 0;
+	width: 25px;
+	height: 23px;
+	background-image: url(../img/large_image_icon.png);
+}
+#product #product-wrapper .product-small-image img{
+	width: 100%;
+	max-width: 50px;
+	max-height: 50px;
+}
+#product #product-wrapper .product-small-image a{
+	position: absolute;
+	padding: 5px;
+}
+#product #product-wrapper .product-small-image a:first-child{
+	bottom: 0;
+}
+#product #product-wrapper .product-small-image a:nth-child(2){
+	bottom: 60px;
+}
+#product #product-wrapper .product-small-image a:nth-child(3){
+	bottom: 120px;
+}
+#product #product-wrapper .product-small-image a:nth-child(4){
+	bottom: 180px;
+}
+#product #product-wrapper .product-description{
+	overflow-y: auto;
+}
+#product #product-wrapper .product-description h2{
+	font-size: 2em;
+}
+#product #product-wrapper .product-description h3{
+	font-size: 1em;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+#product #product-wrapper .product-description ul,
+#product .product-content-wrapper ul,
+.healthcare .healthcare-wrapper .content-wrapper ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#product #product-wrapper .product-description ul li,
+#product .product-content-wrapper > ul > li,
+.healthcare .healthcare-wrapper .content-wrapper ul li{
+	padding: 0 0 20px 20px;
+	background-image: url(../img/product_detail_dot.png);
+	background-position: 6px 6px;
+}
+#product .product-content-wrapper.product-content2 > ul > li{
+	float: left;
+	padding: 15px 15px 15px 40px;
+	background-image: url(../img/tick.png);
+	background-position: left;
+	width: 150px;
+}
+#product .product-content-wrapper.table-content h1,
+#product .product-content-wrapper.table-content h2,
+#product .product-content-wrapper.table-content h3{
+	margin: 0;
+	font-size: 1.4em;
+	margin-top: 30px;
+}
+#product .product-content-wrapper.table-content h1:first-child,
+#product .product-content-wrapper.table-content h2:first-child,
+#product .product-content-wrapper.table-content h3:first-child{
+	margin-top: 0;
+}
+#product .product-content-wrapper.table-content li{
+	padding-bottom: 0;
+	margin: 10px 0;
+}
+#product .product-detail{
+	padding: 0 5px 0 0;
+}
+#product .product-detail > div{
+	width: 100%;
+	height: 150px;
+}
+#product .product-detail .product-detail-wrapper1{
+	background-color: #CAEBE3;
+}
+#product .product-detail .product-detail-wrapper2{
+	background-color: #EDF9F5;
+}
+#product .product-detail .product-detail-wrapper1 h4,
+#health-tips .detail-wrapper .detail-left-wrapper h4{
+	line-height: 150px;
+	text-align: center;
+	font-size: 1.8em;
+	margin: 0;
+}
+#product .product-detail .product-detail-wrapper1 p,
+#health-tips .detail-wrapper .detail-left-wrapper p{
+	text-align: center;
+	display: none;
+}
+#product .product-detail .product-detail-wrapper2 p{
+	padding-top: 60px;
+	text-align: center;
+}
+#product .product-content-tab-wrapper{
+	padding: 0;
+}
+#product .product-content-tab-wrapper ul{
+	list-style-type: none;
+	padding: 0;
+}
+#product .product-content-tab-wrapper ul li{
+	position: relative;
+	height: 48px;
+	margin-bottom: 2px;
+	background-color: #EEEEEE;
+}
+#product .product-content-tab-wrapper ul li:last-child{
+	height: 50px;
+	margin-bottom: 0;
+}
+#product .product-content-tab-wrapper ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 48px;
+	padding-left: 40px;
+}
+#product .product-content-tab-wrapper ul li:hover,
+#product .product-content-tab-wrapper ul li.active{
+	background-color: #CAEBE3;
+}
+#product .product-content-tab-wrapper ul li:hover a,
+#product .product-content-tab-wrapper ul li.active a{
+	color: #FFF;
+}
+#product .product-content-tab-wrapper ul li:hover a:after,
+#product .product-content-tab-wrapper ul li.active a:after{
+	position: absolute;
+	content: '';
+	width: 12px;
+	height: 14px;
+	display: inline-block;
+	background-image: url(../img/product_detail_arrow.png);
+	right: 0;
+	top: 17px;
+}
+#product .product-content-wrapper{
+	padding: 0;
+	height: 300px;
+	background-color: #EDFDFA;
+	padding: 30px;
+	overflow: auto;
+	display: none;
+}
+#product .product-content-wrapper > ul > li li{
+	padding: 5px 0;
+}
+#product .product-content-wrapper > ul > li li:before{
+	content: '-';
+	padding-right: 30px;
+}
+#product .product-content-wrapper.product-content1{
+	display: block;
+}
+#product #product-more-wrapper{
+	margin: 30px 0;
+}
+#product #product-more-wrapper > div{
+	position: relative;
+	padding: 0;
+	padding-right: 5px;
+	overflow: hidden;
+}
+#product #product-more-wrapper > div img{
+	width: 100%;
+}
+#index #main .index-wrapper .info-label,
+#product #product-more-wrapper > div .info-label{
+	position: absolute;
+	height: 30px;
+	top: 10px;
+	left: 0;
+	background-color: #1D768C;
+	line-height: 30px;
+	color: #FFF;
+	padding-left: 25px;
+	padding-right: 10px;
+}
+#product #product-more-wrapper > div .info{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	bottom: 0;
+	left: 0;
+	background-color: #FFF;
+	opacity: 0.7;
+}
+#product #product-more-wrapper > div .info p{
+	float: left;
+	line-height: 40px;
+	padding-left: 25px;
+	max-width: 260px;
+}
+#product #product-more-wrapper > div .info a{
+	float: right;
+	line-height: 40px;
+	padding-right: 25px;
+}
+/*product-children*/
+#product.children .sub-tab-wrapper{
+	margin: 0;
+}
+#product.children .sub-tab-wrapper li:hover,
+#product.children .sub-tab-wrapper li.active{
+	background-color: #FFEDEB;
+}
+#product.children .sub-tab-wrapper li a{
+	width: 160px;
+}
+#product.children .tab-icon-outer-wrapper{
+	background-color: #FCEEEE;
+}
+#product.children .product-detail .product-detail-wrapper1{
+	background-color: #FFEDEB;
+}
+#product.children .product-detail .product-detail-wrapper2{
+	background-color: #F7F7F7;
+}
+#product.children .product-content-tab-wrapper ul li:hover,
+#product.children .product-content-tab-wrapper ul li.active{
+	background-color: #F7D2CE;
+}
+#product.children .product-content-wrapper{
+	background-color: #FCEEEE;
+}
+#product.children #product-more-wrapper > div .info-label{
+	background-color: #C26344;
+}
+
+/*healthcare*/
+.healthcare .healthcare-wrapper{
+	padding: 0;
+}
+.healthcare .healthcare-wrapper .image-wrapper{
+	position: relative;
+	height: 450px;
+	max-height: 450px;
+}
+.healthcare .healthcare-wrapper img{
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.healthcare .healthcare-wrapper .content-wrapper ul{
+	background-color: #FDEEEE;
+	padding: 20px;
+	margin: 0;
+}
+.healthcare .healthcare-wrapper .content-wrapper h2{
+	color: #FEACA2;
+	font-size: 2em;
+}
+.healthcare .healthcare-wrapper .content-wrapper h3{
+	font-size: 1em;
+	margin-bottom: 15px;
+}
+.healthcare .healthcare-btn{
+	padding: 0;
+	margin: 20px 0;
+}
+.healthcare .healthcare-btn a{
+	display: inline-block;
+	background-color: #CCCCCC;
+	color: #FFF;
+	padding: 10px 20px;
+}
+
+/*contact*/
+.contact-section #header{
+	border: 0;
+	padding: 0;
+}
+.contact-section #contact-nav{
+	background-color: #F3F3F3;
+	border-bottom: 3px solid #EDEDED;
+	margin-bottom: 25px;
+}
+.contact-section #contact-nav li{
+	background-image: url(../img/laug_sep.png);
+	background-position: left;
+}
+.contact-section #contact-nav li:first-child{
+	background-image: none;
+}
+.contact-section #contact-nav li a{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.contact-section #contact-nav li.active a,
+.contact-section #contact-nav li:hover a{
+	text-decoration: underline;
+}
+
+/*lastest-offers*/
+#lastest-offers #offers-wrapper{
+	margin-bottom: 25px;
+}
+#lastest-offers #offers-wrapper > div{
+	margin-bottom: 10px;
+}
+#lastest-offers #offers-wrapper .img-wrapper img{
+	width: 100%;
+}
+#lastest-offers #offers-wrapper .content-wrapper > div{
+	height: 100%;
+}
+#lastest-offers #offers-wrapper .content-wrapper .content-left{
+	background-color: #C4EDF6;
+	display: table;
+}
+#lastest-offers #offers-wrapper .content-wrapper .content-right{
+	background-color: #EAF6F8;
+	padding: 15px;
+}
+#lastest-offers #offers-wrapper .content-wrapper .content-left h3{
+	font-size: 1.5em;
+	margin: 0;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	color: #000077;
+}
+#lastest-offers #offers-wrapper .content-wrapper .content-right p{
+	margin: 0;
+}
+#lastest-offers #offers-wrapper .more-btn,
+#faq .more-btn{
+	margin-bottom: 30px;
+	padding: 0;
+	background-color: #F7F7F7;
+}
+#lastest-offers #offers-wrapper .more-btn a,
+#faq .more-btn a{
+	padding: 15px 0;
+	width: 100%;
+	display: inline-block;
+}
+#lastest-offers #offers-wrapper .more-btn a span,
+#faq .more-btn a span{
+	position: relative;
+	margin: 0 auto;
+	width: 70px;
+	text-align: center;
+	display: block;
+}
+#lastest-offers #offers-wrapper .more-btn a span:after,
+#faq .more-btn a span:after{
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 8px;
+	background-image: url(../img/offers_arrow_icon.png);
+	right: -14px;
+	top: 8px;
+}
+#lastest-offers #offers-wrapper .no-content{
+	padding: 0;
+}
+#lastest-offers #offers-wrapper .no-content img{
+	width: 100%;
+}
+
+/*contact-us*/
+#lastest-offers.contact-us #offers-wrapper > div{
+	overflow: hidden;
+}
+#lastest-offers.contact-us #offers-wrapper > div > div{
+	padding: 0;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-left div{
+	display: table-cell;
+	vertical-align: middle;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-left h3{
+	display: block;
+	vertical-align: inherit;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-left p{
+	text-align: center;
+	font-size: 0.5em;
+	margin-top: 10px;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right{
+	padding: 0;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li{
+	padding: 15px 20px;
+	width: 100%;
+	border-bottom: 1px solid #E1ECEE;
+	color: #848788;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li label{
+	width: 65px;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li a{
+	color: #848788;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image .content-left{
+	display: block;
+	padding: 0;
+	background-color: #EAF6F8;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image .content-left img{
+	width: 100%;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image .content-right{
+	background-color: #EAF6F8;
+	padding: 20px 15px;
+}
+#lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image .content-right p,
+#lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image .content-right a{
+	color: #848788;
+}
+
+/*advertisements*/
+#advertisements .advertisements-top{
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+#advertisements .advertisements-top div{
+	padding: 0;
+	height: 300px;
+}
+#advertisements .advertisements-top div iframe{
+	width: 100%;
+	height: 100%;
+}
+#advertisements .advertisements-top div.content1,
+#advertisements .advertisements-top div.content2{
+	padding: 30px 20px;
+}
+#advertisements .advertisements-top div.content1{
+	background-color: #C4EDF6;
+}
+#advertisements .advertisements-top div.content2{
+	background-color: #EAF6F8;
+}
+#advertisements .advertisements-top div.content1 h3{
+	color: #286D9E;
+	margin: 0;
+	margin-bottom: 30px;
+	font-size: 1.5em;
+}
+#advertisements .video-outer-wrapper{
+	overflow: hidden;
+}
+#advertisements .video-outer-wrapper .video-wrapper{
+	position: relative;
+	padding: 0;
+	margin-bottom: 20px;
+	padding-right: 5px;
+}
+#advertisements .video-outer-wrapper .video-wrapper .image img{
+	max-width: 100%;
+	max-height: 150px;
+}
+#advertisements .video-outer-wrapper .video-wrapper .image{
+	position: relative;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 140px;
+	background-color: #EAF6F8;
+}
+#advertisements .video-outer-wrapper .video-wrapper .image .image-inner{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+#advertisements .video-outer-wrapper .video-wrapper .content{
+	position: relative;
+	background-color: #C4EDF6;
+	width: 100%;
+	padding: 5px 5px 40px 5px;
+}
+#advertisements .video-outer-wrapper .video-wrapper a.play-btn{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 140px;
+	top: 0;
+	left: 0;
+}
+#advertisements .video-outer-wrapper .video-wrapper a.play-btn span{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	display: block;
+	background-image: url(../img/ad_play_btn.png);
+	background-position: 0 0;
+	left: 50%;
+	top: 50%;
+	margin-left: -32px;
+	margin-top: -32px;
+}
+#advertisements .video-outer-wrapper .video-wrapper a.play-btn:hover span{
+	background-position: 0 -64px;
+}
+#advertisements .video-outer-wrapper .video-wrapper .content a{
+	position: absolute;
+	padding: 2px 35px;
+	background-color: #383743;
+	color: #FFF;
+	right: 8px;
+	bottom: 15px;
+}
+#advertisements .video-outer-wrapper .video-wrapper .content a:before{
+	content: '>';
+	position: absolute;
+	left: 20px;
+	top: 0;
+	line-height: 22px;
+}
+
+/*pagination*/
+.pagination-wrapper{
+	padding: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.pagination-wrapper .right-s{
+	margin-right: 10px;
+}
+.pagination-wrapper .right-l{
+	margin-right: 20px;
+}
+.pagination-btn,
+.pagination-skip{
+	float: left;
+	padding: 15px 25px;
+	height: 50px;
+}
+.pagination-btn{
+	background-color: #F7F7F7;
+	color: #12738F;
+	cursor: pointer;
+}
+.pagination-btn:hover,
+.pagination-btn.active{
+	background-color: #E0F3F6;
+}
+.pagination-btn.with-select{
+	padding: 7px;
+	cursor: inherit;
+}
+.pagination-btn select{
+	border: 0;
+	background-color: #FFF;
+	height: 36px;
+	width: 100px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.pagination-btn.with-select:before{
+	content: '跳至';
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*news*/
+#news .year-wrapper{
+	width: 100%;
+	background-color: #EFF0F2;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+#news .year-wrapper h3{
+	margin: 0;
+	font-size: 1.8em;
+	border-left: 2px solid #A6A6A8;
+	padding-left: 10px;
+}
+#news .content-row{
+	overflow: hidden;
+	border-top: 2px solid #F5F5F5;
+}
+#news .content-row:last-child{
+	margin-bottom: 20px;
+	border-bottom: 2px solid #F5F5F5;
+}
+#news .content-row > div{
+	padding: 20px;
+	min-height: 38px;
+}
+#news .content-row .colume2{
+	position: relative;
+	border-left: 2px solid #F5F5F5;
+}
+#news .content-row:nth-child(odd) .colume1{
+	background-color: #C7E3E2;
+}
+#news .content-row:nth-child(odd) .colume2{
+	background-color: #FAFAFA;
+}
+#news .content-row.active .colume1{
+	background-color: #EAF6F8;
+}
+#news .content-row .colume2 .content-wrapper{
+	display: none;
+	margin-top: 20px;
+}
+#news .content-row.active .colume2 .content-wrapper{
+	display: block;
+}
+#news .content-row .colume2 .title-wrapper h4{
+	font-size: 1.2em;
+	color: #6ABED8;
+	text-decoration: underline;
+	margin: 0;
+	margin-right: 30px;
+}
+#news .content-row .colume2 .title-wrapper a{
+	position: absolute;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(../img/news_open_btn.png);
+	right: 20px;
+	top: 20px;
+}
+#news .content-row.active .colume2 .title-wrapper a{
+	background-position: 0 -22px;
+}
+#news .content-row .colume2 .img img{
+	float: right;
+	max-width: 100%;
+}
+#news .content-row .colume2 .text p{
+	color: #848788;
+}
+
+#product-take #product-take-wrapper{
+	margin: 30px 0 40px 0;
+	overflow: hidden;
+}
+#product-take #product-take-wrapper .title-wrapper h3{
+	font-size: 2em;
+}
+#product-take #product-take-wrapper .content-left,
+#product-take #product-take-wrapper .content-right{
+	float: left;
+}
+#product-take #product-take-wrapper .content-left{
+	width: 75%;
+}
+#product-take #product-take-wrapper .content-right{
+	position: relative;
+	width: 25%;
+}
+#product-take #product-take-wrapper .content-left .index-wrapper a,
+#product-take #product-take-wrapper .content-left .index-wrapper div{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-image: url(../img/which_fitter_1.jpg);
+	background-size: 100%;
+}
+#product-take #product-take-wrapper .content-left .index-wrapper div{
+	background-image: url(../img/which_fitter_text.jpg);
+}
+#product-take #product-take-wrapper .content-left .index-wrapper a.active{
+	opacity: 0.7;
+}
+#product-take #product-take-wrapper .content-left .index-wrapper a.inactive{
+	opacity: 0.3;
+}
+#product-take #product-take-wrapper .content-left .index-wrapper a.result{
+	height: 60px;
+	background-color: #FFE29C;
+	margin-top: 20px;
+	background-image: url(../img/which_enter_btn.jpg);
+	background-size: auto 200%;
+	background-position-x: center;
+}
+#product-take #product-take-wrapper .content-left .index-wrapper a.result:hover{
+	background-position-y: -60px;
+	background-color: #FFC69B;
+}
+#product-take #product-take-wrapper .content-right .index-wrapper{
+	padding-right: 0;
+	margin-right: 5px;
+}
+#product-take #product-take-wrapper .content-right .index-wrapper > div.matched-outer{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/which_bg.jpg);
+	background-color: #F3F1F2;
+	background-size: 100%;
+	overflow: auto;
+}
+#product-take #product-take-wrapper .content-right .level-wrapper{
+	position: absolute;
+	width: 100%;
+	top: -30px;
+	display: none;
+}
+#product-take #product-take-wrapper .content-right .level-wrapper p{
+	float: left;
+	margin-right: 5px;
+}
+#product-take #product-take-wrapper .content-right p:before{
+	content: '●';
+	margin-right: 2px;
+}
+#product-take #product-take-wrapper .content-right p.level1:before{color: #FFD442;}
+#product-take #product-take-wrapper .content-right p.level2:before{color: #FF7529;}
+#product-take #product-take-wrapper .content-right p.level3:before{color: #FD111C;}
+#product-take #product-take-wrapper .content-right .matched-product-wrapper{
+	position: relative;
+	width: 150px;
+	margin: 0 auto;
+}
+#product-take #product-take-wrapper .content-right .matched-product{
+	margin-bottom: 15px;
+}
+#product-take #product-take-wrapper .content-right .matched-product h4{
+	color: #C36447;
+	text-align: center;
+	font-size: 1.2em;
+	margin: 0;
+}
+#product-take #product-take-wrapper .content-right .matched-product p{
+	text-align: center;
+	font-size: 1em;
+	margin: 0;
+}
+#product-take #product-take-wrapper .content-right .arrow{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	left: 0;
+	background-color: #D7D7D7;
+	opacity: 0.7;
+	background-position: center;
+	cursor: pointer;
+	display: none;
+}
+#product-take #product-take-wrapper .content-right .arrow:hover{
+	opacity: 1;
+}
+#product-take #product-take-wrapper .content-right .arrow-up{
+	top: 0;
+	background-image: url(../img/which_up_arrow.png);
+}
+#product-take #product-take-wrapper .content-right .arrow-down{
+	bottom: 5px;
+	background-image: url(../img/which_down_arrow.png);
+}
+
+/*faq*/
+.sub-tab-session{
+	position: relative;
+}
+.sub-tab-session .arrow{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	top: 0;
+	
+	display: none;
+}
+.sub-tab-session .arrow-left{background-image: url(../img/sub_bar_tap_left.png); left: 0;}
+.sub-tab-session .arrow-right{background-image: url(../img/sub_bar_tap.png); right: 0;}
+#faq .sub-tab-outer-wrapper,
+#health-tips .sub-tab-outer-wrapper{
+	background-image: none;
+	margin-bottom: 20px;
+}
+#faq .sub-tab-wrapper,
+#health-tips .sub-tab-wrapper{
+	margin: 0;
+}
+#faq .sub-tab-wrapper li.active,
+#faq .sub-tab-wrapper li:hover{
+	background-color: #FFF5C9;
+}
+#faq .sub-tab-wrapper li a,
+#health-tips .sub-tab-wrapper li a{
+	width: 160px;
+	color: #CFBC90;
+}
+#faq .sub-tab-wrapper li:hover a,
+#faq .sub-tab-wrapper li.active a{
+	color: #666666;
+}
+#faq .sub-tab-wrapper li.arrow a,
+#health-tips .sub-tab-wrapper li.arrow a{
+	width: 50px;
+	text-align: center;
+	color: #C8C8C8;
+}
+#faq .content-outer-wrapper{
+	position: relative;
+	z-index: 2
+}
+#faq .content-outer-wrapper:after{
+	content: '';
+	display:block;
+	clear: both;
+}
+#faq .content-outer-wrapper .content-wrapper{
+	padding: 0;
+	padding-right: 5px;
+	padding-bottom: 20px;
+}
+#faq .content-outer-wrapper .content-wrapper img,
+#faq .content-outer-wrapper .detail-wrapper img{
+	width: 100%;
+}
+#faq .content-outer-wrapper .content-wrapper .text-wrapper,
+#faq .content-outer-wrapper .detail-wrapper .text-wrapper{
+	position: relative;
+	padding: 10px 15px 40px;
+	height: 140px;
+	background-color: #F0EDD2;
+}
+#faq .content-outer-wrapper .content-wrapper .text-wrapper .detail,
+#faq .content-outer-wrapper .detail-wrapper .text-wrapper .detail{
+	position: absolute;
+	width: 90px;
+	height: 36px;
+	right: 0;
+	bottom: 0;
+	background-color: #E0C84D;
+	padding: 8px;
+	text-align: center;
+	color: #FFF;
+}
+#faq .content-outer-wrapper .detail-wrapper{
+	position: absolute;
+	width: 66.66%;
+	padding-right: 5px;
+	display: none;
+	border-bottom: 10px solid #FFF;
+}
+#faq .content-outer-wrapper .detail-wrapper .text-wrapper{
+	height: auto;
+	z-index: 2
+}
+#faq .content-outer-wrapper .detail-wrapper .share-wrapper{
+	
+}
+#faq .content-outer-wrapper .detail-wrapper .description{
+	max-height: 300px;
+	overflow: auto;
+	padding-top: 15px;
+	margin-top: 10px;
+	border-top: 1px #FFF solid;
+}
+#faq .content-outer-wrapper .detail-wrapper .description p{
+	color: #666666;
+}
+
+/*company-history*/
+#company-history .history-text,
+#charity-fund .fund-text{
+	max-width: 900px;
+	margin: 0 auto;
+}
+#company-history .history-text p,
+#charity-fund .fund-text p{
+	color: #878787;
+	text-align: center;
+}
+#history-timeline,
+#fund-timeline{
+	width: 90%;
+	max-width: 1000px;
+	margin: 50px auto;
+	padding-top: 50px;
+	background-image: url(../img/charity_arrow.png);
+	background-position: center top;
+}
+#history-timeline #timeline_date_separator_1954{
+	padding-top: 0;
+}
+#history-timeline div.timeline_title span.timeline_title_date,
+#fund-timeline div.timeline_title span.timeline_title_date{
+	display: none;
+}
+#history-timeline div.timeline_title,
+#fund-timeline div.timeline_title{
+	margin: 0;
+}
+#history-timeline div.timeline_title span.timeline_title_label{
+	position: relative;
+	font-size: 2em;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 15px;
+	color: #FFF;
+	background-position: left;
+}
+#history-timeline .timeline_element_left div.timeline_title span.timeline_title_label{
+	background-image: url(../img/intro_year_tag_1.png);
+}
+#history-timeline .timeline_element_right div.timeline_title span.timeline_title_label{
+	background-image: url(../img/intro_year_tag_2.png);
+}
+#history-timeline div.timeline div.date_separator span,
+#history-timeline div.timeline_title span.timeline_title_label,
+#fund-timeline div.timeline_title span.timeline_title_label{
+	font-family: "Times New Roman";
+}
+#history-timeline div.timeline div.date_separator span{
+	font-size: 2em;
+	border: 0;
+	background-color: #F8F8F8;
+	color: #8E8E8E;
+	height: 35px;
+	line-height: 35px;
+}
+div.timeline_left div.timeline_element:after,
+div.timeline_right div.timeline_element:after,
+div.timeline_dual div.timeline_element_left:after,
+div.timeline_dual div.timeline_element_right:after,
+div.timeline_left div.timeline_element:hover:after,
+div.timeline_right div.timeline_element:hover:after,
+div.timeline_dual div.timeline_element_left:hover:after,
+div.timeline_dual div.timeline_element_right:hover:after{
+	background-color: #FF0000;
+}
+#history-timeline div.timeline_element_box{
+	border: 0;
+}
+#history-timeline div.timeline_title,
+#history-timeline div.timeline_element.blog_post div.content{
+	background-color: #F8F8F8;
+}
+#history-timeline div.timeline_element.blog_post div.content{
+	color: #878787;
+	padding: 10px 20px 20px 20px;
+}
+#history-timeline .youtube-btn{
+	display: block;
+	width: 162px;
+	height: 52px;
+	background-image: url(../img/intro_play_btn.png);
+	margin-top: 15px;
+}
+div.timeline_element.blog_post div.slider_container span.slider_prev,
+div.timeline_element.blog_post div.slider_container span.slider_next{
+	width: 40px;
+	height: 40px;
+	opacity: 1;
+	bottom: 50%;
+	margin-bottom: -20px;
+	background-position: 0 0;
+}
+div.timeline_element.blog_post div.slider_container span.slider_prev:hover,
+div.timeline_element.blog_post div.slider_container span.slider_next:hover{
+	background-position: 0 -40px;
+}
+div.timeline_element.blog_post div.slider_container span.slider_prev{
+	left: 0;
+	right: auto;
+	background-image: url(../img/intro_arrow_left.png);
+}
+div.timeline_element.blog_post div.slider_container span.slider_next{
+	right: 0;
+	background-image: url(../img/intro_arrow_right.png);
+}
+
+#company-history .center-intro-video{
+	text-align: center;
+}
+#company-history .center-intro-video iframe{
+	width: 100%;
+	max-width: 500px;
+}
+
+/*charity-fund*/
+#charity-fund .fund-text h2{
+	text-align: center;
+	margin-bottom: 25px;
+}
+#charity-fund .fund-text p{
+	text-align: left;
+}
+#fund-timeline .timeline{
+	padding-top: 70px;
+}
+#fund-timeline div.timeline_title span.timeline_title_label{
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	font-size: 3.5em;
+	color: #0096B0;
+	text-align: center;
+	margin-bottom: 8px;
+}
+#fund-timeline div.timeline_element_box{
+	border: 0;
+	box-shadow: none;
+	border-radius: 0;
+}
+#fund-timeline div.timeline_element.blog_post div.content{
+	text-align: center;
+	color: #878787;
+	padding-bottom: 30px;
+}
+#fund-timeline div.timeline_title,
+#fund-timeline div.timeline_element.blog_post div.content{
+	position: relative;
+	background-color: #F0FFFF;
+}
+#fund-timeline div.timeline div.timeline_element.animated{
+	margin-bottom: 60px;
+}
+#fund-timeline div.timeline_left div.timeline_element:before,
+#fund-timeline div.timeline_right div.timeline_element:before,
+#fund-timeline div.timeline_dual div.timeline_element_left:before,
+#fund-timeline div.timeline_dual div.timeline_element_right:before{
+	width: 60px;
+}
+#fund-timeline div.timeline_right div.timeline_element_box,
+#fund-timeline div.timeline_dual div.timeline_element_right div.timeline_element_box{
+	margin-left: 60px;
+}
+#fund-timeline div.timeline_left div.timeline_element_box,
+#fund-timeline div.timeline_dual div.timeline_element_left div.timeline_element_box{
+	margin-right: 60px;
+}
+#fund-timeline div.timeline_title:before{
+	content: '';
+	width: 60px;
+	height: 3px;
+	background-color: #000;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+}
+
+/*terms*/
+#terms #terms-wrapper{
+	background-color: #C4EDF6;
+	margin-bottom: 25px;
+}
+#terms #terms-wrapper .terms-left h2{
+	font-size: 1.8em;
+	text-align: center;
+	margin-top: 35px;
+	color: #000077;
+}
+#terms #terms-wrapper .terms-right{
+	padding: 15px;
+	background-color: #EAF6F8;
+}
+#terms #terms-wrapper .terms-right h3{
+	font-size: 1.2em;
+	color: #6ABED8;
+}
+#terms #terms-wrapper .terms-right p,
+#terms #terms-wrapper .terms-right li{
+	color: #848788;
+}
+
+/*health-tips*/
+#health-tips .sub-tab-wrapper li.active,
+#health-tips .sub-tab-wrapper li:hover{
+	background-color: #677D3A;
+}
+#health-tips .sub-tab-wrapper li:hover a,
+#health-tips .sub-tab-wrapper li.active a{
+	color: #FFF;
+}
+#health-tips .sub-tab-wrapper li a{
+	color: #677D3A;
+}
+#health-tips .notice-wrapper{
+	position: relative;
+	width: 100%;
+	padding: 20px 40px;
+	background-color: #A1AE75;
+}
+#health-tips .notice-wrapper p{
+	color: #FFF;
+	margin: 0;
+}
+#health-tips .image-wrapper{
+	position: relative;
+	width: 100%;
+}
+#health-tips .image-wrapper img{
+	width: 100%;
+}
+#health-tips .detail-wrapper{
+	position: relative;
+	overflow: hidden;
+	margin: 20px 0;
+}
+#health-tips .detail-wrapper .detail-left-wrapper{
+	height: 150px;
+	background-color: #A1AE75;
+	z-index: 2;
+}
+#health-tips .detail-wrapper .detail-left-wrapper h4,
+#health-tips .detail-wrapper .detail-left-wrapper p{
+	color: #FFF;
+}
+#health-tips .detail-wrapper .detail-right-wrapper h2,
+#health-tips .detail-wrapper .detail-right-wrapper h3,
+#health-tips .detail-wrapper .detail-right-wrapper h4,
+#health-tips .detail-wrapper .detail-right-wrapper p{
+	color: #666666;
+	margin: 0;
+	font-size: 1em;
+}
+#health-tips .detail-wrapper .detail-right-wrapper h2{
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+#health-tips .detail-wrapper .detail-right-wrapper h3{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#health-tips .detail-wrapper .detail-right-wrapper p{
+	margin-bottom: 20px;
+}
+#health-tips .function-wrapper{
+	position: relative;
+	background-color: #F6F7F8;
+	overflow: hidden;
+	padding: 20px 30px 0 30px;
+}
+#health-tips .function-wrapper > div{
+	padding: 0;
+}
+#health-tips .function-wrapper .function-btn{
+	position: relative;
+	width: 100%;
+	background-position: 0 101%;
+	background-size: 100%;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+#health-tips .function-wrapper .function-btn:last-child{
+	margin-bottom: 20px;
+}
+#health-tips.cold_and_flu .function-wrapper .function-left-wrapper .function-btn{
+	background-image: url(../img/tips/trip_2_left_btn.png);
+}
+#health-tips.cold_and_flu .function-wrapper .function-right-wrapper .function-btn{
+	background-image: url(../img/tips/trip_2_right_btn.png);
+}
+#health-tips.children .function-wrapper .function-left-wrapper .function-btn{
+	background-image: url(../img/tips/trip_3_left_btn.png);
+}
+#health-tips.children .function-wrapper .function-right-wrapper .function-btn{
+	background-image: url(../img/tips/trip_3_right_btn.png);
+}
+#health-tips.pain .function-wrapper .function-left-wrapper .function-btn,
+#health-tips.allergy .function-wrapper .function-left-wrapper .function-btn,
+#health-tips.gerd .function-wrapper .function-left-wrapper .function-btn{
+	background-image: url(../img/tips/trip_4_left_btn.png);
+}
+#health-tips.pain .function-wrapper .function-right-wrapper .function-btn,
+#health-tips.gerd .function-wrapper .function-right-wrapper .function-btn{
+	background-image: url(../img/tips/trip_4_right_btn.png);
+}
+#health-tips .function-wrapper .function-btn:hover,
+#health-tips .function-wrapper .function-btn.active{
+	background-position: 0 0;
+}
+#health-tips .function-wrapper .function-btn > img{
+	margin-top: 3%;
+	width: 50%;
+}
+#health-tips.children .function-wrapper .function-btn > img{
+	width: 70%;
+}
+#health-tips .function-wrapper .function-btn > p{
+	width: 50%;
+	text-align: center;
+	color: #FFF;
+	margin-bottom: 0;
+}
+#health-tips.children .function-wrapper .function-btn > p{
+	width: 70%;
+}
+#health-tips.pain .function-wrapper .function-btn > p,
+#health-tips.allergy .function-wrapper .function-btn > p,
+#health-tips.gerd .function-wrapper .function-btn > p{
+	padding: 20px;
+	margin: 0 !important;
+	font-size: 1.2em;
+	width: 80%;
+	text-align: left;
+}
+#health-tips.pain .function-wrapper .function-right-wrapper  .function-btn > p,
+#health-tips.gerd .function-wrapper .function-right-wrapper  .function-btn > p{
+	padding-left: 40px;
+}
+#health-tips.children .function-wrapper .function-btn > p.two_icons{
+	width: 35%;
+	float: left;
+}
+#health-tips.children .function-wrapper .function-btn > p.two_icons:last-child{
+	margin: 0;
+}
+#health-tips .function-wrapper .function-left-wrapper .function-btn > img,
+#health-tips .function-wrapper .function-left-wrapper .function-btn > p{
+	margin-left: 20%;
+}
+#health-tips.children .function-wrapper .function-left-wrapper .function-btn > img,
+#health-tips.children .function-wrapper .function-left-wrapper .function-btn > p{
+	margin-left: 10%;
+}
+#health-tips .function-wrapper .function-right-wrapper .function-btn > img,
+#health-tips .function-wrapper .function-right-wrapper .function-btn > p{
+	margin-left: 30%;
+}
+#health-tips.children .function-wrapper .function-right-wrapper .function-btn > img,
+#health-tips.children .function-wrapper .function-right-wrapper .function-btn > p{
+	margin-left: 20%;
+}
+#health-tips .function-wrapper .function-btn.function-logo,
+#health-tips .function-wrapper .function-btn.function-logo:hover{
+	background-position: 0 0 !important;
+	cursor: inherit !important;
+}
+#health-tips.cold_and_flu .function-wrapper .function-btn.function-logo,
+#health-tips.cold_and_flu .function-wrapper .function-btn.function-logo:hover,
+#health-tips.pain .function-wrapper .function-btn.function-logo,
+#health-tips.pain .function-wrapper .function-btn.function-logo:hover,
+#health-tips.gerd .function-wrapper .function-btn.function-logo,
+#health-tips.gerd .function-wrapper .function-btn.function-logo:hover{
+	background-image: url(../img/tips/trip_2_8.png) !important;
+}
+#health-tips.children .function-wrapper .function-btn.function-logo,
+#health-tips.children .function-wrapper .function-btn.function-logo:hover{
+	background-image: url(../img/tips/trip_3_6.png) !important;
+}
+#health-tips.allergy .function-wrapper .function-btn.function-logo,
+#health-tips.allergy .function-wrapper .function-btn.function-logo:hover{
+	background-image: url(../img/tips/trip_7_btn_3.png) !important;
+}
+#health-tips .function-wrapper .function-middle-wrapper{
+	position: relative;
+}
+#health-tips.gerd .function-wrapper .function-middle-wrapper{
+	background-image: url(../img/tips/trip_8_bg.png);
+	background-size: 100%;
+	background-position: bottom center;
+}
+#health-tips .function-wrapper .function-middle-wrapper img{
+	position: absolute;
+	width: 100%;
+	bottom:	0;
+	left: 0;
+	display: none;
+}
+#health-tips.gerd .function-wrapper .function-middle-wrapper img{
+	width: 70%;
+	bottom: 30%;
+	left: 15%;
+}
+#health-tips .function-wrapper .function-middle-wrapper img.active{
+	display: block;
+}
+#health-tips.pain .function-wrapper .function-middle-wrapper img{
+	width: 80%;
+	left: 10%;
+}
+#health-tips .function-wrapper .function-middle-wrapper p{
+	width: 100%;
+	text-align: center;
+	color: #666666;
+	display: none;
+}
+#health-tips .function-wrapper .function-middle-wrapper p.active{
+	display: block;
+}
+#health-tips.gerd .function-wrapper .function-middle-wrapper p{
+	position: absolute;
+	bottom: 20%;
+}
+#health-tips .function-wrapper .function-full-wrapper img{
+	width: 100%;
+	margin-bottom: 20px;
+}
+#health-tips.bloating .function-wrapper .function-full-wrapper img{
+	width: 60%;
+	margin: 0 auto;
+	display: block;
+}
+#health-tips.allergy .function-wrapper .function-full-wrapper{
+	height: 500px;
+	overflow: auto;
+}
+#health-tips .function-wrapper .function-tab-wrapper:after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 10px;
+	background-color: #677D3A;
+	float: left;
+}
+#health-tips .function-wrapper .function-tab-wrapper{
+	margin-bottom: 40px;
+	z-index: 2;
+}
+#health-tips .function-wrapper .function-tab-btn{
+	position: relative;
+	background-color: #C7DA7D;
+	width: 30%;
+	float: left;
+	margin-right: 5%;
+	color: #FFF;
+	padding: 15px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 1.5em;
+}
+#health-tips .function-wrapper .function-tab-btn:last-child{
+	margin-right: 0;
+}
+#health-tips .function-wrapper .function-tab-btn:hover,
+#health-tips .function-wrapper .function-tab-btn.active{
+	background-color: #677D3A;
+}
+#health-tips.allergy .function-wrapper .function-left-wrapper{
+	display: none;
+}
+#health-tips.allergy .function-wrapper .function-left-wrapper.active{
+	display: block;
+}
+#health-tips.allergy .function-wrapper .function-right-wrapper{
+	display: none;
+}
+#health-tips.allergy .function-wrapper .function-middle-wrapper{
+	margin-left: 10%;
+}
+#health-tips .function-detail-wrapper .detail-right-wrapper{
+	display: none;
+}
+#health-tips .function-detail-wrapper .detail-right-wrapper.active{
+	display: block;
+}
+
+@media only screen and (min-width: 768px){
+	#header{
+		padding-bottom: 10px;
+		border-bottom: 2px solid #EFEFEF;
+	}
+	#footer{
+		border-top: 2px solid #EFEFEF;
+	}
+
+	/*index*/
+	#index #main .index-wrapper:hover p{
+		display: block;
+	}
+
+	/*lastest-offers*/
+	#lastest-offers #offers-wrapper .img-wrapper{
+		padding-right: 3px;
+	}
+	#lastest-offers #offers-wrapper .content-wrapper{
+		padding-left: 3px;
+		display: none;
+	}
+	#lastest-offers #offers-wrapper .content-wrapper .content-right{
+		overflow-y: auto;
+	}
+
+	/*product-children*/
+	.healthcare .healthcare-wrapper:nth-child(odd){
+		padding-right: 3px;
+	}
+	.healthcare .healthcare-wrapper:nth-child(even){
+		padding-left: 3px;
+	}
+
+	/*contact-us*/
+	#lastest-offers.contact-us #offers-wrapper > div > div:nth-child(odd){
+		padding-right: 3px;
+		clear: both;
+	}
+	#lastest-offers.contact-us #offers-wrapper > div > div:nth-child(even){
+		padding-left: 3px;
+	}
+
+	/*company-history*/
+	#company-history .history-text{
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+	/*index*/
+	#index #main .index-wrapper h3{
+		font-size: 1.5em;
+	}
+	#index #main .index-wrapper p{
+		top: 45%;
+	}
+}
+@media only screen and (min-width: 992px){
+	/*index*/
+	#index #main .index-wrapper:hover h3{
+		top: 25%;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+	/*index*/
+	#index #main .index-wrapper .link-wrapper{
+		background-position: center 90%;
+	}
+	#index #main .index-wrapper p{
+		top: 45%;
+	}
+
+	/*health-tips*/
+	#health-tips.pain .function-wrapper .function-btn > p,
+	#health-tips.allergy .function-wrapper .function-btn > p,
+	#health-tips.gerd .function-wrapper .function-btn > p{
+		padding: 10px;
+		font-size: 1em;
+		width: 85%;
+	}
+	#health-tips.pain .function-wrapper .function-right-wrapper .function-btn > p,
+	#health-tips.allergy .function-wrapper .function-right-wrapper .function-btn > p,
+	#health-tips.gerd .function-wrapper .function-right-wrapper .function-btn > p{
+		padding-left: 30px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	/*header*/
+	#header .navbar-right{
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-right: 0;
+	}
+	#header #lang, #header #social-icon{
+		margin-top: 0;
+	}
+
+	.contact-section #contact-nav li a{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	/*index*/
+	#index #main .index-wrapper .link-wrapper{
+		background-position: center 95%;
+	}
+	#index #main .index-wrapper p{
+	  	line-height: 12px;
+	}
+	#index #main .index-wrapper h3{
+		font-size: 1em;
+	}
+	#index #main .index-wrapper:hover h3{
+		top: 15%;
+	}
+	#index #main .index-wrapper .banner-title{
+		width: 77px;
+		height: 24px;
+	}
+	#index #main .index-wrapper:last-child .banner-title{
+		width: 90px;
+	}
+
+	/*product*/
+	#product #product-wrapper .product-big-image,
+	#product #product-wrapper .product-small-image,
+	#product #product-wrapper .product-description,
+	.healthcare .healthcare-wrapper .image-wrapper{
+		height: 330px;
+	}
+
+	/*health-tips*/
+	#health-tips.pain .function-wrapper .function-btn > p,
+	#health-tips.allergy .function-wrapper .function-btn > p,
+	#health-tips.gerd .function-wrapper .function-btn > p{
+		padding: 5px;
+		font-size: 0.6em;
+		width: 90%;
+	}
+	#health-tips.pain .function-wrapper .function-right-wrapper .function-btn > p,
+	#health-tips.allergy .function-wrapper .function-right-wrapper .function-btn > p,
+	#health-tips.gerd .function-wrapper .function-right-wrapper .function-btn > p{
+		padding-left: 20px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px){
+	.scroll-wrapper{
+		overflow-y:hidden;
+		overflow-x:auto;
+	}
+
+	/*pagination*/
+	.pagination-wrapper .right-s{
+		margin-right: 5px;
+	}
+	.pagination-wrapper .right-l{
+		margin-right: 10px;
+		margin-bottom: 5px;
+	}
+	.pagination-btn,
+	.pagination-skip{
+		padding: 15px 10px;
+	}
+	.pagination-btn.with-select:before{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	/*banner*/
+	#banner-wrapper{
+		overflow: hidden;
+	}
+	/*footer*/
+	#footer .container-fluid-40{
+		position: relative;
+		padding: 0;
+	}
+	#footer .copyright, #footer .footer-link{
+		float: left;
+		width: 100%;
+	}
+	#footer .copyright p{
+		padding-left: 10px;
+	}
+	#footer .footer-link ul{
+		padding: 0;
+	}
+
+	/*sidebar*/
+	#sidebar-wrapper #social-icon-sidebar{
+		position: relative;
+		width: 200px;
+		margin-left: 25px;
+	}
+	#sidebar-wrapper #social-icon-sidebar li{
+		float: left;
+	}
+	#sidebar-wrapper #social-icon-sidebar li a{
+		width: 45px;
+		height: 45px;
+		padding: 0;
+		margin: 3px;
+	}
+	#sidebar-wrapper #social-icon-sidebar li a:hover{
+		background-position: 0 -45px;
+	}
+	#sidebar-wrapper #social-icon-sidebar li a.fb-icon{background-image: url(../img/facebook_icon_mobile.png);}
+	#sidebar-wrapper #social-icon-sidebar li a.weibo-icon{background-image: url(../img/webio_icon_mobile.png);}
+	#sidebar-wrapper #social-icon-sidebar li a.youtube-icon{background-image: url(../img/youtube_icon_mobile.png);}
+	#sidebar-wrapper #lang-sidebar{
+		width: 160px;
+		margin: 25px 0 25px 25px;
+	}
+	#sidebar-wrapper #lang-sidebar li{
+		float: left;
+	}
+	#sidebar-wrapper #lang-sidebar li a{
+		padding: 0 15px;
+	}
+
+	/*product*/
+	#product .market-tab-wrapper li,
+	#product .sub-tab-wrapper li,
+	#product .tab-icon-outer-wrapper li,
+	#faq .sub-tab-wrapper li,
+	#health-tips .sub-tab-wrapper li{
+		float: left;
+	}
+	#product #product-wrapper .product-big-image,
+	#product #product-wrapper .product-big-image img,
+	#product #product-wrapper .product-small-image,
+	#product #product-wrapper .product-small-image a{
+		padding: 0;
+	}
+	#product #product-wrapper .product-description{
+		height: auto !important;
+	}
+	#product .product-detail{
+		display: none;
+	}
+	#product .product-content-tab-wrapper ul li,
+	#product .product-content-tab-wrapper ul{
+		width: 780px;
+		margin: 0;
+		padding: 0;
+	}
+	#product .product-content-tab-wrapper ul li{
+		float: left;
+		height: 50px;
+		width: 130px;
+	}
+	#product .product-content-tab-wrapper ul li a{
+		height: 50px;
+		line-height: 50px;
+		padding: 0;
+		text-align: center;
+	}
+	#product .product-content-tab-wrapper ul li:hover a:after,
+	#product .product-content-tab-wrapper ul li.active a:after{
+		width: 14px;
+		height: 12px;
+		background-image: url(../img/product_detail_arrow_mobile.png);
+		top: auto;
+		bottom: 0;
+		left: 50%;
+		right: auto;
+		margin-left: -6px;
+	}
+	#product #product-more-wrapper > div .info p{
+		line-height: 20px;
+	}
+	#product .market-tab-wrapper{
+		width: 330px;
+	}
+	#product .market-tab-wrapper a{
+		padding-left: 5px;
+		padding-right: 5px;
+		width: 110px !important;
+		font-size: 0.8em;
+	}
+
+	/*lastest-offers*/
+	#lastest-offers #offers-wrapper .content-wrapper{
+		height: auto !important;
+	}
+	#lastest-offers #offers-wrapper .content-wrapper h3{
+		padding: 30px 0;
+	}
+
+	/*contact-us*/
+	#lastest-offers.contact-us #offers-wrapper .content-wrapper{
+		height: 304px !important;
+	}
+	#lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image{
+		height: 230px !important;
+	}
+	#lastest-offers.contact-us #offers-wrapper .content-wrapper h3{
+		padding: 0;
+	}
+	#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li{
+		padding: 15px 10px;
+	}
+	#lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li label{
+		display: block;
+	}
+
+	/*advertisements*/
+	#advertisements .video-outer-wrapper .video-wrapper:nth-child(even){
+		padding-left: 5px;
+		padding-right: 0;
+	}
+
+	/*img*/
+	#news .content-row > div{
+		padding: 10px;
+	}
+	#news .content-row .colume2 .img img{
+		display: none;
+	}
+
+	/*product-take*/
+	#product-take #product-take-wrapper{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	#product-take #product-take-wrapper .content-left,
+	#product-take #product-take-wrapper .content-right{
+		width: 100%;
+	}
+	#product-take #product-take-wrapper .content-right{
+		margin-top: 60px;
+	}
+	#product-take #product-take-wrapper .content-right .matched-product-wrapper{
+		width: 200px;
+	}
+	#product-take #product-take-wrapper .content-right{
+		display: none;
+	}
+
+	/*faq*/
+	#faq .content-outer-wrapper .content-wrapper .text-wrapper{
+		height: auto;
+	}
+	#faq .content-outer-wrapper .detail-wrapper{
+		width: 100%;
+	}
+
+	/*charity-fund*/
+	#charity-fund .fund-text h2{
+		font-size: 1.6em
+	}
+
+	/*#health-tips*/
+	#health-tips .notice-wrapper{
+		padding: 10px 20px;
+		background-color: #D2DCB4;
+	}
+	#health-tips .detail-wrapper .detail-left-wrapper{
+		height: 80px;
+		background-color: #D2DCB4;
+		margin-bottom: 20px;
+	}
+	#health-tips .detail-wrapper .detail-left-wrapper h4{
+		line-height: 80px;
+	}
+	#health-tips .function-wrapper{
+		padding: 0;
+		margin-top: 3px;
+	}
+	#health-tips .function-wrapper .function-btn{
+		float: left;
+		margin-right: 1%;
+	}
+	#health-tips .function-wrapper .function-btn:last-child{
+		margin-right: 0;
+	}
+	#health-tips .function-wrapper .function-middle-wrapper img{
+		position: relative;
+	}
+	#health-tips .function-wrapper .function-middle-wrapper p{
+		display: none;
+	}
+	#health-tips .function-wrapper .function-btn > p{
+		width: 100%;
+		margin: 0 !important;
+		font-size: 0.7em;
+	}
+	#health-tips .function-wrapper .function-btn > img{
+		width: 35%;
+		margin: 5% auto 0!important;
+		display: block;
+	}
+	#health-tips .function-wrapper .function-right-wrapper .function-btn > img{
+		margin-top: 13% !important;
+	}
+	#health-tips.children .function-wrapper .function-btn > p.two_icons{
+		width: 50%;
+	}
+	#health-tips.children .function-wrapper .function-btn > p{
+		width: 100%;
+	}
+	#health-tips.children .function-wrapper .function-btn > img{
+		width: 55%;
+	}
+	#health-tips.pain .function-wrapper .function-btn > p,
+	#health-tips.allergy .function-wrapper .function-btn > p,
+	#health-tips.gerd .function-wrapper .function-btn > p{
+		padding: 5% !important;
+		font-size: 0.8em;
+		margin: 0 !important;
+		width: 100%;
+		line-height: 100%;
+	}
+	#health-tips.pain .function-wrapper .function-right-wrapper .function-btn > p,
+	#health-tips.allergy .function-wrapper .function-right-wrapper .function-btn > p,
+	#health-tips.gerd .function-wrapper .function-right-wrapper .function-btn > p{
+		padding-top: 15% !important;
+	}
+	#health-tips .function-wrapper .function-tab-wrapper{
+		margin: 0;
+	}
+	#health-tips.allergy .function-wrapper .function-middle-wrapper{
+		margin: 0;
+	}
+	#health-tips.gerd .function-wrapper .function-middle-wrapper{
+		background-position: center center;
+	}
+	#health-tips.gerd .function-wrapper .function-middle-wrapper img{
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	#health-tips.bloating .function-wrapper .function-full-wrapper img{
+		width: 100%;
+	}
+	#health-tips.allergy .function-wrapper .function-full-wrapper{
+		height: 300px;
+	}
+
+	#health-tips.cold_and_flu .function-wrapper .function-btn,
+	#health-tips.allergy .function-wrapper .function-btn{
+		width: 24.25%;
+	}
+	#health-tips.children .function-wrapper .function-btn,
+	#health-tips.pain .function-wrapper .function-btn,
+	#health-tips.gerd .function-wrapper .function-btn,
+	#health-tips.allergy .function-wrapper .function-btn[rel="5"],
+	#health-tips.allergy .function-wrapper .function-btn[rel="6"],
+	#health-tips.allergy .function-wrapper .function-btn[rel="7"],
+	#health-tips.allergy .function-wrapper .function-btn[rel="8"],
+	#health-tips.allergy .function-wrapper .function-btn[rel="9"],
+	#health-tips.allergy .function-wrapper .function-btn[rel="10"]{
+		width: 32.6666%;
+	}
+	#health-tips.allergy .function-wrapper .function-right-wrapper{
+		display: none;
+	}
+	#health-tips.allergy .function-wrapper .function-right-wrapper.active{
+		display: block;
+	}
+	#health-tips .function-wrapper .function-btn,
+	#health-tips .function-wrapper .function-btn:last-child{
+		margin-bottom: 0;
+	}
+
+	#health-tips .function-wrapper .function-btn{
+		background-position: 0 0;
+	}
+	#health-tips .function-wrapper .function-btn.active{
+		background-position: 0 100%;
+	}
+	#health-tips .function-wrapper .function-btn.function-logo,
+	#health-tips .function-wrapper .function-btn.function-logo:hover{
+		background-position: 0 0 !important;
+	}
+
+	#health-tips.cold_and_flu .function-wrapper .function-left-wrapper .function-btn{
+		background-image: url(../img/tips/trip_2_top_btn.png);
+	}
+	#health-tips.cold_and_flu .function-wrapper .function-right-wrapper .function-btn{
+		background-image: url(../img/tips/trip_2_bottom_btn.png);
+	}
+	#health-tips.children .function-wrapper .function-left-wrapper .function-btn{
+		background-image: url(../img/tips/trip_5_top_btn.png);
+	}
+	#health-tips.children .function-wrapper .function-right-wrapper .function-btn{
+		background-image: url(../img/tips/trip_5_bottom_btn.png);
+	}
+	#health-tips.pain .function-wrapper .function-left-wrapper .function-btn,
+	#health-tips.gerd .function-wrapper .function-left-wrapper .function-btn{
+		background-image: url(../img/tips/trip_3_top_btn.png);
+	}
+	#health-tips.pain .function-wrapper .function-right-wrapper .function-btn,
+	#health-tips.allergy .function-wrapper .function-right-wrapper .function-btn,
+	#health-tips.gerd .function-wrapper .function-right-wrapper .function-btn{
+		background-image: url(../img/tips/trip_3_bottom_btn.png);
+	}
+	#health-tips.gerd .function-wrapper .function-right-wrapper.function-bottom-wrapper .function-btn{
+		background-image: url(../img/tips/trip_4_bottom_btn.png);
+	}
+	#health-tips.cold_and_flu .function-wrapper .function-btn.function-logo,
+	#health-tips.cold_and_flu .function-wrapper .function-btn.function-logo:hover,
+	#health-tips.pain .function-wrapper .function-btn.function-logo,
+	#health-tips.pain .function-wrapper .function-btn.function-logo:hover,
+	#health-tips.allergy .function-wrapper .function-btn.function-logo,
+	#health-tips.allergy .function-wrapper .function-btn.function-logo:hover{
+		background-image: url(../img/tips/trip_2_print.png) !important;
+	}
+	#health-tips.children .function-wrapper .function-btn.function-logo,
+	#health-tips.children .function-wrapper .function-btn.function-logo:hover{
+		background-image: url(../img/tips/trip_5_print.png) !important;
+	}
+
+	/*news*/
+	#news .content-row .colume2 .title-wrapper a{
+		top: 10px;
+		right: 10px;
+	}
+}
+
+@media only screen and (max-width: 399px){
+	#product .market-tab-wrapper {
+		width: 288px !important;
+	}
+	#product .market-tab-wrapper a{
+		padding-left: 0;
+		padding-right: 0;
+		width: 96px !important;
+	}
+}

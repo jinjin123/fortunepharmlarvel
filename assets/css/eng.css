@@ -1,0 +1,72 @@
+#product-take #product-take-wrapper .content-right .index-wrapper > div.matched-outer{
+	background-image: url(../img/product-take/which_bg_eng.jpg);
+}
+
+#index #main .index-wrapper h3{
+	  top: 30%;
+}
+#product .market-tab-wrapper a{
+	width: 145px;
+}
+#product .market-tab-wrapper{
+	width: 435px;
+}
+#product .sub-tab-outer-wrapper{
+	height: 70px;
+}
+#product .sub-tab-wrapper{
+	width: 945px;
+}
+#product .sub-tab-wrapper li a{
+	height: 70px;
+	width: 135px;
+}
+.sidebar-nav li a{
+	width: 130px;
+}
+#product .product-content-wrapper.product-content2 > ul > li{
+	height: 70px;
+}
+#faq .sub-tab-outer-wrapper,
+#faq .sub-tab-wrapper li a{
+	height: 70px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+	#index #main .index-wrapper h3 {
+		font-size: 1.2em;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1120px) { 
+	#header #nav-bar a{
+		padding: 5px 2px;
+		margin: 0px 2px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	#header #logo{
+		width: 65px;
+	}
+}
+@media only screen and (min-width: 992px){
+	#index #main .index-wrapper:hover h3 {
+		top: 15%;
+	}
+}
+@media only screen and (max-width: 767px){
+
+	#product .product-content-tab-wrapper ul li a{
+		padding-top: 3px;
+		line-height: 20px;
+	}
+}
+@media only screen and (max-width: 399px){
+	#index #main .index-wrapper h3{
+		font-size: 0.8em;
+	}
+	#index #main .index-wrapper .video-wrapper p.video-text1{
+		font-size: 0.8em;
+	}
+	#footer .footer-link ul li a{
+		padding: 0 5px;
+	}
+}

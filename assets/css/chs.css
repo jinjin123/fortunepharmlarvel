@@ -1,0 +1,6 @@
+body{
+	font-family:"微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+}
+#product-take #product-take-wrapper .content-right .index-wrapper > div.matched-outer{
+	background-image: url(../img/product-take/which_bg_sc.jpg);
+}

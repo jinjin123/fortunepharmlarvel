@@ -1,0 +1,228 @@
+<?php
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the Closure to execute when that URI is requested.
+|
+*/
+
+
+
+/* Login Route */
+Route::get('member_login', function()
+{
+	return View::make('member_login');
+});
+
+Route::controller('/cpanel', 'UserController');
+
+/* Logout Route */
+Route::get('/logout','UserController@getLogout');
+
+/* Back to site Route */
+Route::get('back', function()
+{
+   echo '<script type="text/javascript">'
+   , 'window.location.replace("http://web.teqapps.com/fortunepharm/cpanel");'
+   ,'window.open("http://web.teqapps.com/fortunepharm/","_blank");'
+   , '</script>';
+});
+
+/* Default Route */
+Route::get('',['uses' =>'HomeController@DefaultHome']);
+
+/*Pages Route */
+Route::get('/{lang}/home',['uses' =>'HomeController@Sorting']);
+Route::get('/{lang}/product/{market_tab}/{series_tab}/{product_tab}',['uses' =>'ProductController@Sorting']);
+Route::get('/{lang}/product/{market_tab}/{series_tab}/{product_tab}/{redirect_product}',['uses' =>'ProductController@Sorting2']);
+Route::get('/{lang}/children-product/{market_tab}/{series_tab}/{product_tab}',['uses' =>'ChildrenProductController@Sorting']);
+Route::get('/{lang}/children-product/{market_tab}/{series_tab}/{product_tab}/{redirect_product}',['uses' =>'ChildrenProductController@Sorting2']);
+Route::get('/{lang}/product-healthcare',['uses' =>'HealthcareProductController@Sorting']);
+Route::get('/{lang}/product_take',['uses' =>'ProducttakeController@Sorting']);
+Route::get('/{lang}/faq/{series_tab}',['uses' =>'FaqController@Sorting']);
+Route::get('/{lang}/company-history/',['uses' =>'CompanyHistoryController@Sorting']);
+Route::get('/{lang}/contact-us/',['uses' =>'ContactusController@Sorting']);
+Route::get('/{lang}/news/{page}',['uses' =>'NewsController@Sorting']);
+Route::get('/{lang}/latest-offers/',['uses' =>'LatestoffersController@Sorting']);
+Route::get('/{lang}/latest-offers2/',['uses' =>'Latestoffers2Controller@Sorting']);
+Route::get('/{lang}/charity-fund/',['uses' =>'CharityfundController@Sorting']);
+Route::get('/{lang}/advertisements/{cursor_yr}/',['uses' =>'AdvertisementsController@Sorting']);
+Route::get('/{lang}/terms/',['uses' =>'TermsController@Sorting']);
+Route::get('/{lang}/privacy/',['uses' =>'PrivacyController@Sorting']);
+Route::get('/{lang}/health-tips/',['uses' =>'HealthTipsController@Sorting']);
+Route::get('/{lang}/health-tips-children/',['uses' =>'HealthTipsChildrenController@Sorting']);
+Route::get('/{lang}/health-tips-pain/',['uses' =>'HealthTipsPainController@Sorting']);
+Route::get('/{lang}/health-tips-cough/',['uses' =>'HealthTipsCoughController@Sorting']);
+Route::get('/{lang}/health-tips-allergy/',['uses' =>'HealthTipsAllergyController@Sorting']);
+Route::get('/{lang}/health-tips-gerd/',['uses' =>'HealthTipsGerdController@Sorting']);
+Route::get('/{lang}/health-tips-bloating/',['uses' =>'HealthTipsBloatingController@Sorting']);
+
+/*AJAX Route*/
+Route::post('/faq_detail', function(){
+	if(Request::ajax()){
+		$lang_name=Input::get('langname');
+		$ajax_faqs=DB::table('faqs')->where('id', Input::only('id'))->get();
+		
+		$lang_question="question_".$lang_name;
+		$lang_answer="answer_".$lang_name;
+				
+		$faqs_data= array(
+    	"id" => $ajax_faqs[0]->id,
+    	"img" => $ajax_faqs[0]->img,
+    	"question" => $ajax_faqs[0]->$lang_question,
+    	"answer" => $ajax_faqs[0]->$lang_answer,
+    	"lang_name" =>$lang_name,
+		);
+		
+		return $faqs_data;
+	}
+});
+
+Route::post('/product_take', function(){
+
+	$input_symptoms=array();
+	$lang_name=Input::get('langname');
+
+	$product =array();
+	$prodcut_symptoms=DB::table('products_fixedindications')->get();
+	$series=DB::table('series')->get();
+	
+	if(Request::ajax()){
+		
+		$products_details = array();
+		
+		
+		$input_symptoms=Input::get('symptoms');
+		$current_indication=$input_symptoms[0];
+		
+	
+		
+		//Get matched products by currnt symptoms
+		$matched_product_ids_arr=DB::table('products_fixedindications')->whereIn('fixedindication_id',$input_symptoms)->get();
+		
+		//Store matched products' id
+		foreach ($matched_product_ids_arr as $matched_product_id){
+		$matched_product_ids[]=$matched_product_id->product_id;
+		}
+		
+		array_unique($matched_product_ids);
+		
+		//Store the products' details
+		$products_details=DB::table('products')->whereIn('id',$matched_product_ids)->where('publish',1)->where('markets_id',1)->get();
+	
+		/************************
+		     Special Scenarios
+		 ************************/
+		
+		/**IF ONLY 敏感**/
+		if(sizeof($input_symptoms)==1 && $input_symptoms[0]==9){
+		$products_details=array();
+		$matched_product_ids=[9,10];
+		$products_details=DB::table('products')->whereIn('id',$matched_product_ids)->where('publish',1)->where('markets_id',1)->get();
+		}
+		
+		/**IF ONLY 喉嚨病**/
+		if(sizeof($input_symptoms)==1 && $input_symptoms[0]==6){
+		$products_details=array();
+		$special_product_ids=[7];
+		$products_details=DB::table('products')->whereIn('id',$special_product_ids)->where('publish',1)->where('markets_id',1)->get();
+		}
+		
+		/**IF ONLY 喉嚨病**/
+		if(sizeof($input_symptoms)==1 && $input_symptoms[0]==10){
+		$products_details=array();
+		$special_product_ids=[23];
+		$products_details=DB::table('products')->whereIn('id',$special_product_ids)->where('publish',1)->where('markets_id',1)->get();
+		}
+		if(sizeof($input_symptoms)==1 && $input_symptoms[0]==11){
+		$products_details=array();
+		$special_product_ids=[6];
+		$products_details=DB::table('products')->whereIn('id',$special_product_ids)->where('publish',1)->where('markets_id',1)->get();
+		}
+		
+		/**IF ONLY 發燒病症**/
+		if(sizeof($input_symptoms)==1 && $input_symptoms[0]==4 || sizeof($input_symptoms)==1 && $input_symptoms[0]==5 || sizeof($input_symptoms)==1 && $input_symptoms[0]==6 || sizeof($input_symptoms)==1 && $input_symptoms[0]==7 || sizeof($input_symptoms)==1 && $input_symptoms[0]==8){
+		$products_details=array();
+		$special_product_ids=[25,19,24,18];
+		$products_details=DB::table('products')->whereIn('id',$special_product_ids)->where('publish',1)->where('markets_id',1)->get();
+		}
+	
+		/**IF ONLY 傷風感冒**/
+		if(sizeof($input_symptoms)==1 && $input_symptoms[0]==1 || sizeof($input_symptoms)==1 && $input_symptoms[0]==2 || sizeof($input_symptoms)==1 && $input_symptoms[0]==3){
+		$products_details=array();
+		$special_product_ids=[1,4,12,14,15];
+		$products_details=DB::table('products')->whereIn('id',$special_product_ids)->where('publish',1)->where('markets_id',1)->get();
+		}
+	
+		
+		
+		//Get the series ID >> Determine the page is children product or normal product
+		foreach ($products_details as $products_detail){
+		$matched_product_series_ids[]=$products_detail->series_id;
+		}
+		
+		//Pick the first matched item , Get all its symptoms, filter the html. 
+		$first_matched_product_id=$matched_product_ids[0];
+		$first_matched_product_symptoms_arr=DB::table('products_fixedindications')->where('product_id',$first_matched_product_id)->get();
+	
+		 
+		 
+		foreach ($first_matched_product_symptoms_arr as $first_matched_product_symptom){
+		$first_matched_product_symptoms[]=$first_matched_product_symptom->fixedindication_id;
+		}
+		
+		$product_take_data=array(
+		"lang_name" => $lang_name,
+		"first_matched_product_symptoms"=>$first_matched_product_symptoms,
+		"products_details"=>$products_details,
+		"series"=>$series,
+		"input_symptoms"=>$input_symptoms,
+		);
+		return $product_take_data;
+	}
+});
+
+Route::post('/video_swap', function(){
+
+	if(Request::ajax()){
+		$lang_name=Input::get('langname');
+		$vid=Input::get('vid');
+		
+		$lang_title="title_".$lang_name;
+		$lang_desc="desc_".$lang_name;
+		
+		$video_deatils=DB::table('advertisments')->where('id', $vid)->get();
+		
+		if($lang_name=='eng'||$lang_name=='cht'){
+		$link=$video_deatils[0]->youtube;
+		}else{
+		$link=$video_deatils[0]->youkou;	
+		}
+		$title=$video_deatils[0]->$lang_title;
+		$desc=$video_deatils[0]->$lang_desc;
+		$date=$video_deatils[0]->date;
+				
+		$video_data= array(
+    	"link" =>$link,
+    	"title" =>$title,
+		"date" =>$date,
+		"desc" =>$desc,
+		"lang_name" =>$lang_name,
+		);
+		
+		return $video_data;
+	}
+});
+
+
+
+?>
+
+
+
+
+

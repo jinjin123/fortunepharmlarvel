@@ -1,0 +1,88 @@
+<?php
+
+class ProducttakeController extends BaseController {
+
+	/*
+	|--------------------------------------------------------------------------
+	| Default Home Controller
+	|--------------------------------------------------------------------------
+	|
+	| You may wish to use controllers instead of, or in addition to, Closure
+	| based routes. That's great! Here is an example controller method to
+	| get you started. To route to this controller, just add the route:
+	|
+	|	Route::get('/', 'HomeController@showWelcome');
+	|
+	*/
+
+	public function Sorting($lang)
+	{
+		
+		$fixed_symptoms=Fixedindication::all();
+		
+	
+		//Product-take
+		if($lang=='eng'){
+		
+		//Static variable
+		$title1="Choose your symptoms";
+		$title2="Find the most suitable medicine for you";
+		$symptoms = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);	
+		//$symptoms_name = array('Runny nose','Sneeze','Blocked nose','Fever','Headache','Sore throat','Menstrual pain','Toothache','Tearful eyes','Dry cough','Chesty Cough','Burning heart','Stomach pain','Bloating','Acid Reflux','Diarrhea','Seasick ');		
+		$search_btn_txt="Search Product";
+		$clear_select_txt="Reset";
+		
+		return View::make('product_take')
+						->with('lang', 'eng')
+						->with('symptoms', $symptoms)//->with('symptoms_name', $symptoms_name)
+						->with('title1', $title1)
+						->with('title2', $title2)
+						->with('fixed_symptoms', $fixed_symptoms)
+						->with('search_btn_txt', $search_btn_txt)
+						->with('clear_select_txt', $clear_select_txt);
+						
+		}else if($lang=='cht'){
+		//Static variable
+		$title1="選擇你的徵狀";
+		$title2="根據症狀找到最適合您的虊";
+		$symptoms = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);	
+		//$symptoms_name = array('流鼻水','噴嚏','鼻塞','發燒','頭痛','喉嚨痛','經痛','牙痛','淚眼','乾咳','痰咳','火燒心','胃痛','胃氣脹','胃酸倒流','肚瀉','暈船浪');					
+		$search_btn_txt="搜索產品";
+		$clear_select_txt="重新選擇徵狀";
+					
+		return View::make('product_take')
+						->with('lang', 'cht')
+						->with('symptoms', $symptoms)
+						->with('title1', $title1)
+						->with('title2', $title2)
+						->with('fixed_symptoms', $fixed_symptoms)
+						->with('search_btn_txt', $search_btn_txt)
+						->with('clear_select_txt', $clear_select_txt);
+						 
+		}else{
+			
+	    //Static variable
+		$title1="选择你的征状";
+		$title2="根据症状找到最适合您的虊";		
+			$symptoms = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17);
+		//$symptoms_name = array('流鼻水','喷嚏','鼻塞','发烧','头痛','喉咙痛','经痛','牙痛','泪眼','干咳','痰咳','火烧心','胃痛','胃气胀','胃酸倒流','肚泻','晕船浪');									
+		$search_btn_txt="搜索产品";
+		$clear_select_txt="重新选择征状";
+			
+		return View::make('product_take')
+						->with('lang', 'chs')
+						->with('symptoms', $symptoms)
+						->with('title1', $title1)
+						->with('title2', $title2)
+						->with('fixed_symptoms', $fixed_symptoms)
+						->with('search_btn_txt', $search_btn_txt)
+						->with('clear_select_txt', $clear_select_txt);
+						 
+			}
+					
+	
+	
+		}
+	
+	
+}

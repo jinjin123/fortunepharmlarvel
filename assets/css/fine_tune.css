@@ -1,0 +1,16 @@
+#product-wrapper .product-small-image img{
+	border:solid;   
+	border-color:#ddd;
+	border-width:1pt;
+
+}
+
+#product-wrapper .product-small-image img:hover{
+border-color:#94c5d2;
+	border-width:2pt;
+}
+
+
+div.index-wrapper > a > p{
+	color:#FFF;
+}
